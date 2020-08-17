@@ -29,6 +29,8 @@ const ModelEvaluate: ModelEvaluateType = async (data: ImageDataset, model: UniMo
       const xs = tf.stack(dataBatch.map((ele) => ele.data));
       const ys = tf.stack(dataBatch.map((ele) => ele.label));
       const evaluateRes = await model.model.evaluate(xs, ys);
+      // tensorflow is converting tensor to numpy automatically
+      // reference: https://github.com/tensorflow/tensorflow/blob/v2.3.0/tensorflow/python/keras/engine/training.py#L1385
       if (typeof evaluateRes[0] === 'number') {
         loss += evaluateRes[0];  
       } else {
