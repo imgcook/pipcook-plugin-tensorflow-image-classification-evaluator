@@ -1,6 +1,6 @@
 {
   "name": "@pipcook/plugins-image-classification-tensorflow-model-evaluate",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "evaluate for tensorflow",
   "main": "dist/index",
   "types": "dist/index",
@@ -14,7 +14,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@pipcook/boa": "^1.1.0",
-    "@pipcook/pipcook-core": "^1.1.0"
+    "@pipcook/pipcook-core": "^1.1.0",
+    "@types/node": "^14.0.27"
   },
   "gitHead": "53e131a069b3112a74ae5d99aa1ab08bec768c7e",
   "devDependencies": {
