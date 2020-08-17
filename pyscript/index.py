@@ -5,5 +5,3 @@ def evaluate(xs, ys, model):
   ys = tf.stack(ys)
   res = model.evaluate(xs, ys)
   return res
-
-  
